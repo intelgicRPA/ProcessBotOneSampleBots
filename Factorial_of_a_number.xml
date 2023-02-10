@@ -5,7 +5,40 @@
       <ScriptCommand xsi:type="CommentCommand" CommandID="e66e2b91-de76-48ab-9c9f-33a9f9e14f68" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="1" PauseBeforeExeucution="false" v_Comment="Put the number, for which factorial need to be calculated." CommandEnabled="true" />
     </ScriptAction>
     <ScriptAction>
-      <ScriptCommand xsi:type="VariableCommand" CommandID="ee8e11b0-eb8f-418e-b33a-f115b69a6266" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vInput" v_Input="6" />
+      <ScriptCommand xsi:type="UserInputCommand" CommandID="495a7090-ada9-4853-8997-a3cac936257c" CommandName="UserInputCommand" IsCommented="false" SelectionName="Prompt for Input" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_InputHeader="Please Provide Input" v_InputDirections="Directions: Enter the number you want to calculate fatorial of">
+        <v_UserInputConfig>
+          <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+            <xs:element name="U15erInpuPPara28Table021023.012815">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Type" type="xs:string" minOccurs="0" />
+                  <xs:element name="Label" type="xs:string" minOccurs="0" />
+                  <xs:element name="Size" type="xs:string" minOccurs="0" />
+                  <xs:element name="DefaultValue" type="xs:string" minOccurs="0" />
+                  <xs:element name="UserInput" type="xs:string" minOccurs="0" />
+                  <xs:element name="ApplyToVariable" type="xs:string" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="U15erInpuPPara28Table021023.012815" msdata:UseCurrentLocale="true">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element ref="U15erInpuPPara28Table021023.012815" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:schema>
+          <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+            <DocumentElement>
+              <U15erInpuPPara28Table021023.012815 diffgr:id="U15erInpuPPara28Table021023.0128151" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+                <Type>TextBox</Type>
+                <Size>100,25</Size>
+                <ApplyToVariable>vInput</ApplyToVariable>
+              </U15erInpuPPara28Table021023.012815>
+            </DocumentElement>
+          </diffgr:diffgram>
+        </v_UserInputConfig>
+      </ScriptCommand>
     </ScriptAction>
     <ScriptAction>
       <ScriptCommand xsi:type="VariableCommand" CommandID="b9bf6194-f37f-459c-af28-3100b2a6d52e" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="3" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vCounter" v_Input="1" />
@@ -14,25 +47,28 @@
       <ScriptCommand xsi:type="VariableCommand" CommandID="2ea4b287-6181-4821-ba1e-6ae15b23cee2" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="4" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vResult" v_Input="1" />
     </ScriptAction>
     <ScriptAction>
-      <ScriptCommand xsi:type="SetEngineDelayCommand" CommandID="61eafd3b-12a1-4134-a295-9845342298cb" CommandName="SetEngineDelayCommand" IsCommented="false" SelectionName="Set Engine Delay" DefaultPause="0" LineNumber="5" PauseBeforeExeucution="false" CommandEnabled="true" v_EngineSpeed="10" />
+      <ScriptCommand xsi:type="CommentCommand" CommandID="61120945-0be9-4b04-9250-bba4848824bb" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="5" PauseBeforeExeucution="false" v_Comment="Engin delay set to 10ms to make the loop faster. default is 250ms. i.e. the pause between two instruction is 250ms." CommandEnabled="true" />
     </ScriptAction>
     <ScriptAction>
-      <ScriptCommand xsi:type="BeginNumberOfTimesLoopCommand" CommandID="70e21bf8-686d-4144-b3fa-9727252a9e38" CommandName="BeginNumberOfTimesLoopCommand" IsCommented="false" SelectionName="Loop Number Of Times" DefaultPause="0" LineNumber="6" PauseBeforeExeucution="false" CommandEnabled="true" v_LoopParameter="[vInput]" v_LoopStart="0" />
+      <ScriptCommand xsi:type="SetEngineDelayCommand" CommandID="61eafd3b-12a1-4134-a295-9845342298cb" CommandName="SetEngineDelayCommand" IsCommented="false" SelectionName="Set Engine Delay" DefaultPause="0" LineNumber="6" PauseBeforeExeucution="false" CommandEnabled="true" v_EngineSpeed="10" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="BeginNumberOfTimesLoopCommand" CommandID="70e21bf8-686d-4144-b3fa-9727252a9e38" CommandName="BeginNumberOfTimesLoopCommand" IsCommented="false" SelectionName="Loop Number Of Times" DefaultPause="0" LineNumber="7" PauseBeforeExeucution="false" CommandEnabled="true" v_LoopParameter="[vInput]" v_LoopStart="0" />
       <AdditionalScriptCommands>
-        <ScriptCommand xsi:type="CommentCommand" CommandID="390e903b-cab1-407d-9caf-900446007842" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="7" PauseBeforeExeucution="false" v_Comment="Items in this section will run within the loop" CommandEnabled="true" />
+        <ScriptCommand xsi:type="CommentCommand" CommandID="390e903b-cab1-407d-9caf-900446007842" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="8" PauseBeforeExeucution="false" v_Comment="Items in this section will run within the loop" CommandEnabled="true" />
       </AdditionalScriptCommands>
       <AdditionalScriptCommands>
-        <ScriptCommand xsi:type="VariableCommand" CommandID="2351f566-56d0-4176-bdee-237308adf7a5" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="8" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vResult" v_Input="[vResult]*[vCounter]" />
+        <ScriptCommand xsi:type="VariableCommand" CommandID="2351f566-56d0-4176-bdee-237308adf7a5" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="9" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vResult" v_Input="[vResult]*[vCounter]" />
       </AdditionalScriptCommands>
       <AdditionalScriptCommands>
-        <ScriptCommand xsi:type="VariableCommand" CommandID="e6d50cb5-83e9-4f65-80d0-ae947241947e" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="9" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vCounter" v_Input="[vCounter]+1" />
+        <ScriptCommand xsi:type="VariableCommand" CommandID="e6d50cb5-83e9-4f65-80d0-ae947241947e" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="10" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vCounter" v_Input="[vCounter]+1" />
       </AdditionalScriptCommands>
       <AdditionalScriptCommands>
-        <ScriptCommand xsi:type="EndLoopCommand" CommandID="922b97e2-d97d-4c3a-9b96-2ca6bce53b6c" CommandName="EndLoopCommand" IsCommented="false" SelectionName="End Loop" DefaultPause="0" LineNumber="10" PauseBeforeExeucution="false" CommandEnabled="true" />
+        <ScriptCommand xsi:type="EndLoopCommand" CommandID="922b97e2-d97d-4c3a-9b96-2ca6bce53b6c" CommandName="EndLoopCommand" IsCommented="false" SelectionName="End Loop" DefaultPause="0" LineNumber="11" PauseBeforeExeucution="false" CommandEnabled="true" />
       </AdditionalScriptCommands>
     </ScriptAction>
     <ScriptAction>
-      <ScriptCommand xsi:type="MessageBoxCommand" CommandID="d380362c-ed47-42fc-91dc-380e8cfb0966" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Print" DefaultPause="0" LineNumber="11" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="[vResult]" v_AutoCloseAfter="0" />
+      <ScriptCommand xsi:type="MessageBoxCommand" CommandID="d380362c-ed47-42fc-91dc-380e8cfb0966" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Print" DefaultPause="0" LineNumber="12" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="[vResult]" v_AutoCloseAfter="0" />
     </ScriptAction>
   </Commands>
   <Variables />

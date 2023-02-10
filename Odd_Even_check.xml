@@ -5,23 +5,21 @@
       <ScriptCommand xsi:type="CommentCommand" CommandID="087281d2-5329-43b2-99e5-9867cebf1ab5" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="1" PauseBeforeExeucution="false" v_Comment="number which we want to test even or odd" CommandEnabled="true" />
     </ScriptAction>
     <ScriptAction>
-      <ScriptCommand xsi:type="VariableCommand" CommandID="6d2f7b70-5dda-463c-9786-a837fcc837f2" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="input" v_Input="2132" />
-    </ScriptAction>
-    <ScriptAction>
-      <ScriptCommand xsi:type="VariableCommand" CommandID="d2c23929-8138-4878-a769-cb20dc0690cd" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="3" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="reminder" v_Input="[input]%2" />
-    </ScriptAction>
-    <ScriptAction>
-      <ScriptCommand xsi:type="BeginIfCommand" CommandID="3fd205e5-e2b9-455e-8d02-75d3293b4e36" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="4" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Value">
-        <v_IfActionParameterTable>
+      <ScriptCommand xsi:type="UserInputCommand" CommandID="78b17e84-0a20-445a-beab-6e56638ba103" CommandName="UserInputCommand" IsCommented="false" SelectionName="Prompt for Input" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_InputHeader="Please Provide Input" v_InputDirections="Directions: Enter the number you want to check ">
+        <v_UserInputConfig>
           <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-            <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I7AcPionPara41Table020823.124108" msdata:UseCurrentLocale="true">
+            <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="U15erInpuPPara28Table021023.012815" msdata:UseCurrentLocale="true">
               <xs:complexType>
                 <xs:choice minOccurs="0" maxOccurs="unbounded">
-                  <xs:element name="I7AcPionPara41Table020823.124108">
+                  <xs:element name="U15erInpuPPara28Table021023.012815">
                     <xs:complexType>
                       <xs:sequence>
-                        <xs:element name="Parameter_x0020_Name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
-                        <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                        <xs:element name="Type" type="xs:string" minOccurs="0" />
+                        <xs:element name="Label" type="xs:string" minOccurs="0" />
+                        <xs:element name="Size" type="xs:string" minOccurs="0" />
+                        <xs:element name="DefaultValue" type="xs:string" minOccurs="0" />
+                        <xs:element name="UserInput" type="xs:string" minOccurs="0" />
+                        <xs:element name="ApplyToVariable" type="xs:string" minOccurs="0" />
                       </xs:sequence>
                     </xs:complexType>
                   </xs:element>
@@ -31,9 +29,44 @@
           </xs:schema>
           <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
             <DocumentElement>
+              <U15erInpuPPara28Table021023.012815 diffgr:id="U15erInpuPPara28Table021023.0128151" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+                <Type>TextBox</Type>
+                <Size>100,25</Size>
+                <ApplyToVariable>vInput</ApplyToVariable>
+              </U15erInpuPPara28Table021023.012815>
+            </DocumentElement>
+          </diffgr:diffgram>
+        </v_UserInputConfig>
+      </ScriptCommand>
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="VariableCommand" CommandID="d2c23929-8138-4878-a769-cb20dc0690cd" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="3" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vReminder" v_Input="[vInput]%2" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="BeginIfCommand" CommandID="3fd205e5-e2b9-455e-8d02-75d3293b4e36" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="4" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Value">
+        <v_IfActionParameterTable>
+          <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+            <xs:element name="I7AcPionPara41Table020823.124108">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Parameter_x0020_Name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+                  <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I7AcPionPara41Table020823.124108" msdata:UseCurrentLocale="true">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element ref="I7AcPionPara41Table020823.124108" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:schema>
+          <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+            <DocumentElement>
               <I7AcPionPara41Table020823.124108 diffgr:id="I7AcPionPara41Table020823.1241081" msdata:rowOrder="0" diffgr:hasChanges="inserted">
                 <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
-                <Parameter_x0020_Value>[reminder]</Parameter_x0020_Value>
+                <Parameter_x0020_Value>[vReminder]</Parameter_x0020_Value>
               </I7AcPionPara41Table020823.124108>
               <I7AcPionPara41Table020823.124108 diffgr:id="I7AcPionPara41Table020823.1241082" msdata:rowOrder="1" diffgr:hasChanges="inserted">
                 <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
