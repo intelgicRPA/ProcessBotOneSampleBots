@@ -81,7 +81,7 @@
         </v_IfActionParameterTable>
       </ScriptCommand>
       <AdditionalScriptCommands>
-        <ScriptCommand xsi:type="CommentCommand" CommandID="98730ab1-e5c5-4580-b88f-c040066dbe8b" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="5" PauseBeforeExeucution="false" v_Comment="Items in this section will run if the statement is true" CommandEnabled="true" />
+        <ScriptCommand xsi:type="CommentCommand" CommandID="98730ab1-e5c5-4580-b88f-c040066dbe8b" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="5" PauseBeforeExeucution="false" v_Comment="Items in this section will run if the statement is true." CommandEnabled="true" />
       </AdditionalScriptCommands>
       <AdditionalScriptCommands>
         <ScriptCommand xsi:type="MessageBoxCommand" CommandID="9e0271e9-9d4f-4a79-afb9-7b563b994977" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Print" DefaultPause="0" LineNumber="6" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="it is an Even number." v_AutoCloseAfter="0" />
