@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Commands>
+    <ScriptAction>
+      <ScriptCommand xsi:type="CommentCommand" CommandID="2de9b072-e4bc-48ea-ac79-dfd597da315e" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="1" PauseBeforeExeucution="false" v_Comment="Enter two numbers you want to do addition on" CommandEnabled="true" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="UserInputCommand" CommandID="f972ede1-9055-4cda-9d44-00a8b0a12c2b" CommandName="UserInputCommand" IsCommented="false" SelectionName="Prompt for Input" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_InputHeader="Please Provide Input" v_InputDirections="Directions: Enter the number you want to calculate fatorial of">
+        <v_UserInputConfig>
+          <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+            <xs:element name="U15erInpuPPara28Table021023.012815">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Type" type="xs:string" minOccurs="0" />
+                  <xs:element name="Label" type="xs:string" minOccurs="0" />
+                  <xs:element name="Size" type="xs:string" minOccurs="0" />
+                  <xs:element name="DefaultValue" type="xs:string" minOccurs="0" />
+                  <xs:element name="UserInput" type="xs:string" minOccurs="0" />
+                  <xs:element name="ApplyToVariable" type="xs:string" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="U15erInpuPPara28Table021023.012815" msdata:UseCurrentLocale="true">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element ref="U15erInpuPPara28Table021023.012815" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:schema>
+          <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+            <DocumentElement>
+              <U15erInpuPPara28Table021023.012815 diffgr:id="U15erInpuPPara28Table021023.0128151" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+                <Type>TextBox</Type>
+                <Label>Enter First number:</Label>
+                <Size>100,25</Size>
+                <ApplyToVariable>value1</ApplyToVariable>
+              </U15erInpuPPara28Table021023.012815>
+              <U15erInpuPPara28Table021023.012815 diffgr:id="U15erInpuPPara28Table021023.0128152" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+                <Type>TextBox</Type>
+                <Label>Enter Second number:</Label>
+                <Size>100,25</Size>
+                <ApplyToVariable>value2</ApplyToVariable>
+              </U15erInpuPPara28Table021023.012815>
+            </DocumentElement>
+          </diffgr:diffgram>
+        </v_UserInputConfig>
+      </ScriptCommand>
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="VariableCommand" CommandID="6b055b55-25cd-46cf-80b2-d93713e8bd1d" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="3" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="Result" v_Input="[value1]+[value2]" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="MessageBoxCommand" CommandID="891474a3-7ea0-4ca4-ab00-7016c7c42233" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Show Message" DefaultPause="0" LineNumber="4" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="[Result]" v_AutoCloseAfter="0" />
+    </ScriptAction>
+  </Commands>
+  <Variables />
+</Script>

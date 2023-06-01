@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Commands>
+    <ScriptAction>
+      <ScriptCommand xsi:type="CommentCommand" CommandID="8847e3bb-b7d0-4e5a-b4a5-07b7a21267dd" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="1" PauseBeforeExeucution="false" v_Comment="number which we want to test prime or not." CommandEnabled="true" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="UserInputCommand" CommandID="5ee070c0-4837-4bed-a5a5-5c38e4e4c1b2" CommandName="UserInputCommand" IsCommented="false" SelectionName="Prompt for Input" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_InputHeader="Please Provide Input" v_InputDirections="Directions: Enter the number you want to check ">
+        <v_UserInputConfig>
+          <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+            <xs:element name="U15erInpuPPara28Table021023.012815">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Type" type="xs:string" minOccurs="0" />
+                  <xs:element name="Label" type="xs:string" minOccurs="0" />
+                  <xs:element name="Size" type="xs:string" minOccurs="0" />
+                  <xs:element name="DefaultValue" type="xs:string" minOccurs="0" />
+                  <xs:element name="UserInput" type="xs:string" minOccurs="0" />
+                  <xs:element name="ApplyToVariable" type="xs:string" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="U15erInpuPPara28Table021023.012815" msdata:UseCurrentLocale="true">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element ref="U15erInpuPPara28Table021023.012815" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:schema>
+          <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+            <DocumentElement>
+              <U15erInpuPPara28Table021023.012815 diffgr:id="U15erInpuPPara28Table021023.0128151" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+                <Type>TextBox</Type>
+                <Size>100,25</Size>
+                <ApplyToVariable>vInput</ApplyToVariable>
+              </U15erInpuPPara28Table021023.012815>
+            </DocumentElement>
+          </diffgr:diffgram>
+        </v_UserInputConfig>
+      </ScriptCommand>
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="VariableCommand" CommandID="f83f173f-aec0-4395-9c42-3484c208ed77" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="3" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="divider" v_Input="2" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="CommentCommand" CommandID="8d3a9628-1979-4a47-b067-8f96f3d0fb09" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="4" PauseBeforeExeucution="false" v_Comment="Engin delay set to 10ms to make the loop faster. default is 250ms. i.e. the pause between two instruction is 250ms." CommandEnabled="true" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="SetEngineDelayCommand" CommandID="bafb2092-38d0-4e28-9f19-0aab9cc4666d" CommandName="SetEngineDelayCommand" IsCommented="false" SelectionName="Set Engine Delay" DefaultPause="0" LineNumber="5" PauseBeforeExeucution="false" CommandEnabled="true" v_EngineSpeed="10" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="BeginContinousLoopCommand" CommandID="6bacc6f2-8cec-466b-b330-fe2651603b88" CommandName="BeginContinousLoopCommand" IsCommented="false" SelectionName="Loop Continuous" DefaultPause="0" LineNumber="6" PauseBeforeExeucution="false" CommandEnabled="true" />
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="CommentCommand" CommandID="bb9233c3-ac94-426e-8f83-f3f8ae6b6295" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="7" PauseBeforeExeucution="false" v_Comment="Items in this section will run within the loop" CommandEnabled="true" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="VariableCommand" CommandID="76e95e08-5667-430a-b264-06989b10c4a8" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="8" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vReminder" v_Input="[vInput]%[divider]" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="BeginIfCommand" CommandID="6fa82eb0-2df4-4df9-b169-4f3bbaf34f71" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="9" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Value">
+          <v_IfActionParameterTable>
+            <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+              <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I6AcPionPara51Table020823.125135" msdata:UseCurrentLocale="true">
+                <xs:complexType>
+                  <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element name="I6AcPionPara51Table020823.125135">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Parameter_x0020_Name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+                          <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+            </xs:schema>
+            <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+              <DocumentElement>
+                <I6AcPionPara51Table020823.125135 diffgr:id="I6AcPionPara51Table020823.1251351" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+                  <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>[reminder]</Parameter_x0020_Value>
+                </I6AcPionPara51Table020823.125135>
+                <I6AcPionPara51Table020823.125135 diffgr:id="I6AcPionPara51Table020823.1251352" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+                  <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>is equal to</Parameter_x0020_Value>
+                </I6AcPionPara51Table020823.125135>
+                <I6AcPionPara51Table020823.125135 diffgr:id="I6AcPionPara51Table020823.1251353" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+                  <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>0</Parameter_x0020_Value>
+                </I6AcPionPara51Table020823.125135>
+              </DocumentElement>
+            </diffgr:diffgram>
+          </v_IfActionParameterTable>
+        </ScriptCommand>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="CommentCommand" CommandID="69a0ccdb-0a32-40b1-b2d6-a7912dc37052" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="10" PauseBeforeExeucution="false" v_Comment="Items in this section will run if the statement is true" CommandEnabled="true" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="MessageBoxCommand" CommandID="3f86344b-2c88-4171-8b8d-6ddca18b55f5" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Print" DefaultPause="0" LineNumber="11" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="It is not a Prime number" v_AutoCloseAfter="0" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="ExitLoopCommand" CommandID="5a9f7919-78a1-4987-b7fe-a22f30e83f99" CommandName="ExitLoopCommand" IsCommented="false" SelectionName="Exit Loop" DefaultPause="0" LineNumber="12" PauseBeforeExeucution="false" CommandEnabled="true" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="ElseCommand" CommandID="c6bee782-a5f3-4ee1-a098-815f93c7a83e" CommandName="ElseCommand" IsCommented="false" SelectionName="Else" DefaultPause="0" LineNumber="13" PauseBeforeExeucution="false" CommandEnabled="true" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="BeginIfCommand" CommandID="432b3209-a0b7-4c1a-91e0-2bffcf47ef27" CommandName="BeginIfCommand" IsCommented="false" SelectionName="Begin If" DefaultPause="0" LineNumber="14" PauseBeforeExeucution="false" CommandEnabled="true" v_IfActionType="Value">
+            <v_IfActionParameterTable>
+              <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+                <xs:element name="I5AcPionPara54Table020823.125433">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element name="Parameter_x0020_Name" msdata:ReadOnly="true" type="xs:string" minOccurs="0" />
+                      <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="I5AcPionPara54Table020823.125433" msdata:UseCurrentLocale="true">
+                  <xs:complexType>
+                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                      <xs:element ref="I5AcPionPara54Table020823.125433" />
+                    </xs:choice>
+                  </xs:complexType>
+                </xs:element>
+              </xs:schema>
+              <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+                <DocumentElement>
+                  <I5AcPionPara54Table020823.125433 diffgr:id="I5AcPionPara54Table020823.1254331" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+                    <Parameter_x0020_Name>Value1</Parameter_x0020_Name>
+                    <Parameter_x0020_Value>[divider]</Parameter_x0020_Value>
+                  </I5AcPionPara54Table020823.125433>
+                  <I5AcPionPara54Table020823.125433 diffgr:id="I5AcPionPara54Table020823.1254332" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+                    <Parameter_x0020_Name>Operand</Parameter_x0020_Name>
+                    <Parameter_x0020_Value>is greater than or equal to</Parameter_x0020_Value>
+                  </I5AcPionPara54Table020823.125433>
+                  <I5AcPionPara54Table020823.125433 diffgr:id="I5AcPionPara54Table020823.1254333" msdata:rowOrder="2" diffgr:hasChanges="inserted">
+                    <Parameter_x0020_Name>Value2</Parameter_x0020_Name>
+                    <Parameter_x0020_Value>[vInput]/2</Parameter_x0020_Value>
+                  </I5AcPionPara54Table020823.125433>
+                </DocumentElement>
+              </diffgr:diffgram>
+            </v_IfActionParameterTable>
+          </ScriptCommand>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="CommentCommand" CommandID="1a0d19ee-4cad-4ea3-b54e-9ac18d196f36" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="15" PauseBeforeExeucution="false" v_Comment="Items in this section will run if the statement is true" CommandEnabled="true" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="MessageBoxCommand" CommandID="f36e685b-3110-42cd-8399-e65c78f13871" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Print" DefaultPause="0" LineNumber="16" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="It is a Prime number" v_AutoCloseAfter="0" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="ExitLoopCommand" CommandID="bcf97d65-bbd0-4146-a2b6-c79e8dbbd058" CommandName="ExitLoopCommand" IsCommented="false" SelectionName="Exit Loop" DefaultPause="0" LineNumber="17" PauseBeforeExeucution="false" CommandEnabled="true" />
+          </AdditionalScriptCommands>
+          <AdditionalScriptCommands>
+            <ScriptCommand xsi:type="EndIfCommand" CommandID="09870967-7860-4ce6-96f8-1fad0a93eda4" CommandName="EndIfCommand" IsCommented="false" SelectionName="End If" DefaultPause="0" LineNumber="18" PauseBeforeExeucution="false" CommandEnabled="true" />
+          </AdditionalScriptCommands>
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="VariableCommand" CommandID="a0974295-7863-4832-96ec-f2d30d00df6d" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="19" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="divider" v_Input="[divider]+1" />
+        </AdditionalScriptCommands>
+        <AdditionalScriptCommands>
+          <ScriptCommand xsi:type="EndIfCommand" CommandID="3e31274c-fa2e-4d80-8a9d-adf5f6389fb7" CommandName="EndIfCommand" IsCommented="false" SelectionName="End If" DefaultPause="0" LineNumber="20" PauseBeforeExeucution="false" CommandEnabled="true" />
+        </AdditionalScriptCommands>
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="EndLoopCommand" CommandID="e597cf87-bf9a-4c75-bd42-42c2811bd847" CommandName="EndLoopCommand" IsCommented="false" SelectionName="End Loop" DefaultPause="0" LineNumber="21" PauseBeforeExeucution="false" CommandEnabled="true" />
+      </AdditionalScriptCommands>
+    </ScriptAction>
+  </Commands>
+  <Variables />
+</Script>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Commands>
+    <ScriptAction>
+      <ScriptCommand xsi:type="CommentCommand" CommandID="c0f2abda-eea1-48cf-889a-2e9aeb989d17" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="1" PauseBeforeExeucution="false" v_Comment="set the Word we want to reverse" CommandEnabled="true" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="UserInputCommand" CommandID="45f6dfb2-40b9-4540-a8d3-91f00c07f73e" CommandName="UserInputCommand" IsCommented="false" SelectionName="Prompt for Input" DefaultPause="0" LineNumber="2" PauseBeforeExeucution="false" CommandEnabled="true" v_InputHeader="Please Provide Input" v_InputDirections="Directions: Enter the word you want to reverse">
+        <v_UserInputConfig>
+          <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+            <xs:element name="U15erInpuPPara28Table021023.012815">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Type" type="xs:string" minOccurs="0" />
+                  <xs:element name="Label" type="xs:string" minOccurs="0" />
+                  <xs:element name="Size" type="xs:string" minOccurs="0" />
+                  <xs:element name="DefaultValue" type="xs:string" minOccurs="0" />
+                  <xs:element name="UserInput" type="xs:string" minOccurs="0" />
+                  <xs:element name="ApplyToVariable" type="xs:string" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="U15erInpuPPara28Table021023.012815" msdata:UseCurrentLocale="true">
+              <xs:complexType>
+                <xs:choice minOccurs="0" maxOccurs="unbounded">
+                  <xs:element ref="U15erInpuPPara28Table021023.012815" />
+                </xs:choice>
+              </xs:complexType>
+            </xs:element>
+          </xs:schema>
+          <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+            <DocumentElement>
+              <U15erInpuPPara28Table021023.012815 diffgr:id="U15erInpuPPara28Table021023.0128151" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+                <Type>TextBox</Type>
+                <Size>100,25</Size>
+                <ApplyToVariable>vInput</ApplyToVariable>
+              </U15erInpuPPara28Table021023.012815>
+            </DocumentElement>
+          </diffgr:diffgram>
+        </v_UserInputConfig>
+      </ScriptCommand>
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="MessageBoxCommand" CommandID="8f93b20d-2619-4338-a5e5-73a560aa96a9" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Print" DefaultPause="0" LineNumber="3" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="Input string is: [vInput]" v_AutoCloseAfter="0" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="VariableCommand" CommandID="d07340d2-3f8e-4b95-86c5-304cd4f10d5a" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="4" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vSubInput" v_Input="[vInput]" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="VariableCommand" CommandID="bf002242-1f43-490a-ae7d-aef9afd2c9ed" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="5" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vResult" v_Input="" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="GetWordLengthCommand" CommandID="f5b56989-2854-459a-a4d5-7eba9069ccd4" CommandName="GetLengthCommand" IsCommented="false" SelectionName="Get Word Length" DefaultPause="0" LineNumber="6" PauseBeforeExeucution="false" CommandEnabled="true" v_InputValue="[vInput]" v_applyToVariableName="vLength" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="CommentCommand" CommandID="4d356d4d-aeb2-407f-9b44-10250d87efa9" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="7" PauseBeforeExeucution="false" v_Comment="Engin delay set to 10ms to make the loop faster. default is 250ms. i.e. the pause between two instruction is 250ms." CommandEnabled="true" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="SetEngineDelayCommand" CommandID="53a90473-ba09-4bda-9a43-8830d2b81db3" CommandName="SetEngineDelayCommand" IsCommented="false" SelectionName="Set Engine Delay" DefaultPause="0" LineNumber="8" PauseBeforeExeucution="false" CommandEnabled="true" v_EngineSpeed="10" />
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="BeginNumberOfTimesLoopCommand" CommandID="ea68759c-6c63-49b4-9d4e-5ab356ba893d" CommandName="BeginNumberOfTimesLoopCommand" IsCommented="false" SelectionName="Loop Number Of Times" DefaultPause="0" LineNumber="9" PauseBeforeExeucution="false" CommandEnabled="true" v_LoopParameter="[vLength]" v_LoopStart="0" />
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="CommentCommand" CommandID="ab9bee57-796a-46e5-8649-bb548860425c" CommandName="CommentCommand" IsCommented="false" SelectionName="Comment Line" DefaultPause="0" LineNumber="10" PauseBeforeExeucution="false" v_Comment="Items in this section will run within the loop" CommandEnabled="true" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="GetWordLengthCommand" CommandID="d9bdf235-930d-45ee-a50a-ccdf47df7442" CommandName="GetLengthCommand" IsCommented="false" SelectionName="Get Word Length" DefaultPause="0" LineNumber="11" PauseBeforeExeucution="false" CommandEnabled="true" v_InputValue="[vSubInput]" v_applyToVariableName="vSubLength" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="StringSubstringCommand" CommandID="b5f92f1f-6b18-47a8-9021-f0a7c4ac8b0d" CommandName="StringSubstringCommand" IsCommented="false" SelectionName="Substring" DefaultPause="0" LineNumber="12" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="[vSubInput]" v_startIndex="0" v_stringLength="1" v_applyToVariableName="vLetter" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="TextExtractorCommand" CommandID="e399258c-74f6-486a-bc86-dd5f346d8ca8" CommandName="TextExtractorCommand" IsCommented="false" SelectionName="Basic Pattern Extraction" DefaultPause="0" LineNumber="13" PauseBeforeExeucution="false" CommandEnabled="true" v_InputValue="[vSubInput]" v_TextExtractionType="Extract All After Text" v_applyToVariableName="vSubInput">
+          <v_TextExtractionTable>
+            <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+              <xs:element name="TexPExPracPorPara44Table020823.014427">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Parameter_x0020_Name" type="xs:string" minOccurs="0" />
+                    <xs:element name="Parameter_x0020_Value" type="xs:string" minOccurs="0" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="TexPExPracPorPara44Table020823.014427" msdata:UseCurrentLocale="true">
+                <xs:complexType>
+                  <xs:choice minOccurs="0" maxOccurs="unbounded">
+                    <xs:element ref="TexPExPracPorPara44Table020823.014427" />
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+            </xs:schema>
+            <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+              <DocumentElement>
+                <TexPExPracPorPara44Table020823.014427 diffgr:id="TexPExPracPorPara44Table020823.0144271" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+                  <Parameter_x0020_Name>Leading Text</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>[vLetter]</Parameter_x0020_Value>
+                </TexPExPracPorPara44Table020823.014427>
+                <TexPExPracPorPara44Table020823.014427 diffgr:id="TexPExPracPorPara44Table020823.0144272" msdata:rowOrder="1" diffgr:hasChanges="inserted">
+                  <Parameter_x0020_Name>Skip Past Occurences</Parameter_x0020_Name>
+                  <Parameter_x0020_Value>0</Parameter_x0020_Value>
+                </TexPExPracPorPara44Table020823.014427>
+              </DocumentElement>
+            </diffgr:diffgram>
+          </v_TextExtractionTable>
+        </ScriptCommand>
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="VariableCommand" CommandID="3675f6e5-4853-4d5e-ad3f-5d19577d4d49" CommandName="VariableCommand" IsCommented="false" SelectionName="Set Variable" DefaultPause="0" LineNumber="14" PauseBeforeExeucution="false" CommandEnabled="true" v_userVariableName="vResult" v_Input="[vLetter][vResult]" />
+      </AdditionalScriptCommands>
+      <AdditionalScriptCommands>
+        <ScriptCommand xsi:type="EndLoopCommand" CommandID="b5573d16-8229-4e46-9dba-ea86b222ea73" CommandName="EndLoopCommand" IsCommented="false" SelectionName="End Loop" DefaultPause="0" LineNumber="15" PauseBeforeExeucution="false" CommandEnabled="true" />
+      </AdditionalScriptCommands>
+    </ScriptAction>
+    <ScriptAction>
+      <ScriptCommand xsi:type="MessageBoxCommand" CommandID="8c5404cd-8a64-4838-ba88-03d7e2d77081" CommandName="MessageBoxCommand" IsCommented="false" SelectionName="Print" DefaultPause="0" LineNumber="16" PauseBeforeExeucution="false" CommandEnabled="true" v_Message="Reverse string is: [vResult]" v_AutoCloseAfter="0" />
+    </ScriptAction>
+  </Commands>
+  <Variables />
+</Script>
